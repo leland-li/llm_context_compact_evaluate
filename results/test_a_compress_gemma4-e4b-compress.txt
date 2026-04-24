@@ -1,15 +1,15 @@
-模型: gemma4-e4b-compress
-冷启动时间: 90.90s
-首Token响应时间(TTFT): 189521.13ms (热启)
-总响应时间: 282.41s (热启)
-吞吐量: 1.48 token/s (热启)
-Token数: 417
-输入字符数: 2786
-输出字符数: 1306
-压缩比: 2.13x
+模型 (Model Name): gemma4-e4b-compress
+冷启动时间 (Cold Start Time): 90.90s
+首Token响应时间 (Time to First Token, TTFT): 189521.13ms (热启 / Warm Start)
+总响应时间 (Total Response Time): 282.41s (热启 / Warm Start)
+吞吐量 (Throughput): 1.48 token/s (热启 / Warm Start)
+Token数 (Token Count): 417
+输入字符数 (Input Character Count): 2786
+输出字符数 (Output Character Count): 1306
+压缩比 (Compression Ratio): 2.13x
 
 ================================================================================
-压缩结果:
+压缩结果 (Compressed Output):
 ================================================================================
 **Session Summary: Wealth Management Strategy & Execution**
 

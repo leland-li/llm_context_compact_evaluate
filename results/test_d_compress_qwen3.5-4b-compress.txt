@@ -1,15 +1,15 @@
-模型: qwen3.5-4b-compress
-冷启动时间: 8.48s
-首Token响应时间(TTFT): 8383.93ms (热启)
-总响应时间: 17.56s (热启)
-吞吐量: 31.21 token/s (热启)
-Token数: 548
-输入字符数: 44105
-输出字符数: 1703
-压缩比: 25.90x
+模型 (Model Name): qwen3.5-4b-compress
+冷启动时间 (Cold Start Time): 8.48s
+首Token响应时间 (Time to First Token, TTFT): 8383.93ms (热启 / Warm Start)
+总响应时间 (Total Response Time): 17.56s (热启 / Warm Start)
+吞吐量 (Throughput): 31.21 token/s (热启 / Warm Start)
+Token数 (Token Count): 548
+输入字符数 (Input Character Count): 44105
+输出字符数 (Output Character Count): 1703
+压缩比 (Compression Ratio): 25.90x
 
 ================================================================================
-压缩结果:
+压缩结果 (Compressed Output):
 ================================================================================
 ### Session Summary
 **Session ID:** `b0d8d4d4-6b0d-4f1c-8d39-d4b95c4b94d4`

@@ -1,15 +1,15 @@
-模型: gemma4-e4b-compress
-冷启动时间: 72.57s
-首Token响应时间(TTFT): 109448.83ms (热启)
-总响应时间: 185.78s (热启)
-吞吐量: 1.94 token/s (热启)
-Token数: 361
-输入字符数: 29469
-输出字符数: 1103
-压缩比: 26.72x
+模型 (Model Name): gemma4-e4b-compress
+冷启动时间 (Cold Start Time): 72.57s
+首Token响应时间 (Time to First Token, TTFT): 109448.83ms (热启 / Warm Start)
+总响应时间 (Total Response Time): 185.78s (热启 / Warm Start)
+吞吐量 (Throughput): 1.94 token/s (热启 / Warm Start)
+Token数 (Token Count): 361
+输入字符数 (Input Character Count): 29469
+输出字符数 (Output Character Count): 1103
+压缩比 (Compression Ratio): 26.72x
 
 ================================================================================
-压缩结果:
+压缩结果 (Compressed Output):
 ================================================================================
 *   **Turn 1: Greeting**
     *   **Action:** User initiated a greeting ("hello").

@@ -1,15 +1,15 @@
-模型: glm-edge-4b-compress
-冷启动时间: 8.00s
-首Token响应时间(TTFT): 2997.87ms (热启)
-总响应时间: 5.76s (热启)
-吞吐量: 40.26 token/s (热启)
-Token数: 232
-输入字符数: 20177
-输出字符数: 988
-压缩比: 20.42x
+模型 (Model Name): glm-edge-4b-compress
+冷启动时间 (Cold Start Time): 8.00s
+首Token响应时间 (Time to First Token, TTFT): 2997.87ms (热启 / Warm Start)
+总响应时间 (Total Response Time): 5.76s (热启 / Warm Start)
+吞吐量 (Throughput): 40.26 token/s (热启 / Warm Start)
+Token数 (Token Count): 232
+输入字符数 (Input Character Count): 20177
+输出字符数 (Output Character Count): 988
+压缩比 (Compression Ratio): 20.42x
 
 ================================================================================
-压缩结果:
+压缩结果 (Compressed Output):
 ================================================================================
 The user asked for today's weather in Beijing, and the AI provided a detailed response based on a web search using the built-in `web_search_grounding` tool. The AI mentioned that the air quality is very unhealthy due to high pollution levels, advising sensitive groups to avoid outdoor activities. It also noted some hazy conditions expected overnight. Here's a summary of today's weather in Beijing:
 

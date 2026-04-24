@@ -1,15 +1,15 @@
-模型: gemma4-e2b-compress
-冷启动时间: 16.08s
-首Token响应时间(TTFT): 14257.76ms (热启)
-总响应时间: 21.16s (热启)
-吞吐量: 25.75 token/s (热启)
-Token数: 545
-输入字符数: 44105
-输出字符数: 1838
-压缩比: 24.00x
+模型 (Model Name): gemma4-e2b-compress
+冷启动时间 (Cold Start Time): 16.08s
+首Token响应时间 (Time to First Token, TTFT): 14257.76ms (热启 / Warm Start)
+总响应时间 (Total Response Time): 21.16s (热启 / Warm Start)
+吞吐量 (Throughput): 25.75 token/s (热启 / Warm Start)
+Token数 (Token Count): 545
+输入字符数 (Input Character Count): 44105
+输出字符数 (Output Character Count): 1838
+压缩比 (Compression Ratio): 24.00x
 
 ================================================================================
-压缩结果:
+压缩结果 (Compressed Output):
 ================================================================================
 *   **Turn 1: Product Research (Lenovo Yoga Tab Pro)**
     *   **Goal:** Search for reviews and specifications of the Lenovo Yoga Tab Pro.

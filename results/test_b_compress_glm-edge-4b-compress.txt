@@ -1,14 +1,14 @@
-模型: glm-edge-4b-compress
-冷启动时间: 5.28s
-首Token响应时间(TTFT): 3039.06ms (热启)
-总响应时间: 3.88s (热启)
-吞吐量: 17.29 token/s (热启)
-Token数: 67
-输入字符数: 29469
-输出字符数: 214
-压缩比: 137.71x
+模型 (Model Name): glm-edge-4b-compress
+冷启动时间 (Cold Start Time): 5.28s
+首Token响应时间 (Time to First Token, TTFT): 3039.06ms (热启 / Warm Start)
+总响应时间 (Total Response Time): 3.88s (热启 / Warm Start)
+吞吐量 (Throughput): 17.29 token/s (热启 / Warm Start)
+Token数 (Token Count): 67
+输入字符数 (Input Character Count): 29469
+输出字符数 (Output Character Count): 214
+压缩比 (Compression Ratio): 137.71x
 
 ================================================================================
-压缩结果:
+压缩结果 (Compressed Output):
 ================================================================================
 The user has approved the budget and sent a Teams message to Mengrui informing them of this approval. The message was successfully delivered with a status code of "确定" and a timestamp of "2026-04-16T06:39:19.262Z".

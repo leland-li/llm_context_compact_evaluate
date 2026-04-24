@@ -1,15 +1,15 @@
-模型: qwen3.5-4b-compress
-冷启动时间: 2.87s
-首Token响应时间(TTFT): 2861.63ms (热启)
-总响应时间: 8.38s (热启)
-吞吐量: 42.96 token/s (热启)
-Token数: 360
-输入字符数: 2786
-输出字符数: 1031
-压缩比: 2.70x
+模型 (Model Name): qwen3.5-4b-compress
+冷启动时间 (Cold Start Time): 2.87s
+首Token响应时间 (Time to First Token, TTFT): 2861.63ms (热启 / Warm Start)
+总响应时间 (Total Response Time): 8.38s (热启 / Warm Start)
+吞吐量 (Throughput): 42.96 token/s (热启 / Warm Start)
+Token数 (Token Count): 360
+输入字符数 (Input Character Count): 2786
+输出字符数 (Output Character Count): 1031
+压缩比 (Compression Ratio): 2.70x
 
 ================================================================================
-压缩结果:
+压缩结果 (Compressed Output):
 ================================================================================
 - **Session ID**: 2026-04-21-FIN-001 | **User**: U12345 | **Domain**: Wealth Management
 - **Turn 1: Asset Overview & Performance**

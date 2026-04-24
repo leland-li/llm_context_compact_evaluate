@@ -1,15 +1,15 @@
-模型: gemma4-e2b-compress
-冷启动时间: 15.88s
-首Token响应时间(TTFT): 9479.60ms (热启)
-总响应时间: 13.04s (热启)
-吞吐量: 23.32 token/s (热启)
-Token数: 304
-输入字符数: 20177
-输出字符数: 1050
-压缩比: 19.22x
+模型 (Model Name): gemma4-e2b-compress
+冷启动时间 (Cold Start Time): 15.88s
+首Token响应时间 (Time to First Token, TTFT): 9479.60ms (热启 / Warm Start)
+总响应时间 (Total Response Time): 13.04s (热启 / Warm Start)
+吞吐量 (Throughput): 23.32 token/s (热启 / Warm Start)
+Token数 (Token Count): 304
+输入字符数 (Input Character Count): 20177
+输出字符数 (Output Character Count): 1050
+压缩比 (Compression Ratio): 19.22x
 
 ================================================================================
-压缩结果:
+压缩结果 (Compressed Output):
 ================================================================================
 *   **Session ID:** `qira_hybrid_orchestration_20260420_144439_hi_weather`
 *   **Overall Intent:** Weather lookup for Beijing.

@@ -1,15 +1,15 @@
-模型: gemma4-e2b-compress
-冷启动时间: 16.05s
-首Token响应时间(TTFT): 10618.67ms (热启)
-总响应时间: 14.43s (热启)
-吞吐量: 23.15 token/s (热启)
-Token数: 334
-输入字符数: 2786
-输出字符数: 1017
-压缩比: 2.74x
+模型 (Model Name): gemma4-e2b-compress
+冷启动时间 (Cold Start Time): 16.05s
+首Token响应时间 (Time to First Token, TTFT): 10618.67ms (热启 / Warm Start)
+总响应时间 (Total Response Time): 14.43s (热启 / Warm Start)
+吞吐量 (Throughput): 23.15 token/s (热启 / Warm Start)
+Token数 (Token Count): 334
+输入字符数 (Input Character Count): 2786
+输出字符数 (Output Character Count): 1017
+压缩比 (Compression Ratio): 2.74x
 
 ================================================================================
-压缩结果:
+压缩结果 (Compressed Output):
 ================================================================================
 *   **Session ID:** 2026-04-21-FIN-001
 *   **Initial Inquiry & Status (Turn 1):**

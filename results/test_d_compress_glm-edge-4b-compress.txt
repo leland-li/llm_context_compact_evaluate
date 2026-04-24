@@ -1,15 +1,15 @@
-模型: glm-edge-4b-compress
-冷启动时间: 5.03s
-首Token响应时间(TTFT): 3035.98ms (热启)
-总响应时间: 7.77s (热启)
-吞吐量: 51.75 token/s (热启)
-Token数: 402
-输入字符数: 44105
-输出字符数: 1957
-压缩比: 22.54x
+模型 (Model Name): glm-edge-4b-compress
+冷启动时间 (Cold Start Time): 5.03s
+首Token响应时间 (Time to First Token, TTFT): 3035.98ms (热启 / Warm Start)
+总响应时间 (Total Response Time): 7.77s (热启 / Warm Start)
+吞吐量 (Throughput): 51.75 token/s (热启 / Warm Start)
+Token数 (Token Count): 402
+输入字符数 (Input Character Count): 44105
+输出字符数 (Output Character Count): 1957
+压缩比 (Compression Ratio): 22.54x
 
 ================================================================================
-压缩结果:
+压缩结果 (Compressed Output):
 ================================================================================
 The provided information is a transcript of an interaction between the user and an AI system, likely a chatbot or virtual assistant. The conversation includes several turns where the user requests to add a calendar event for a Quarterly Planning meeting with MENGRUI as a participant. The AI attempts to create this event but encounters a temporary error.
 

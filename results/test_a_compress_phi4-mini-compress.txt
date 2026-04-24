@@ -1,15 +1,15 @@
-模型: phi4-mini-compress
-冷启动时间: 8.10s
-首Token响应时间(TTFT): 2508.61ms (热启)
-总响应时间: 5.70s (热启)
-吞吐量: 18.76 token/s (热启)
-Token数: 107
-输入字符数: 2786
-输出字符数: 302
-压缩比: 9.23x
+模型 (Model Name): phi4-mini-compress
+冷启动时间 (Cold Start Time): 8.10s
+首Token响应时间 (Time to First Token, TTFT): 2508.61ms (热启 / Warm Start)
+总响应时间 (Total Response Time): 5.70s (热启 / Warm Start)
+吞吐量 (Throughput): 18.76 token/s (热启 / Warm Start)
+Token数 (Token Count): 107
+输入字符数 (Input Character Count): 2786
+输出字符数 (Output Character Count): 302
+压缩比 (Compression Ratio): 9.23x
 
 ================================================================================
-压缩结果:
+压缩结果 (Compressed Output):
 ================================================================================
 {
   "session_summary": [
