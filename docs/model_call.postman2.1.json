@@ -1,0 +1,5956 @@
+{
+	"info": {
+		"name": "默认离线项目",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"variable": [],
+	"auth": {
+		"type": "noauth",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "",
+				"type": "string"
+			}
+		],
+		"bearer": [
+			{
+				"key": "token",
+				"value": "",
+				"type": "string"
+			}
+		],
+		"basic": [
+			{
+				"key": "username",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"env": [],
+	"item": [
+		{
+			"name": "loadmodel",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"url": {
+					"raw": "http://127.0.0.1:8060/app/v1/model/llm/loadTogpu",
+					"host": [
+						"http"
+					],
+					"query": [],
+					"variable": [],
+					"path": [
+						"127.0.0.1:8060",
+						"app",
+						"v1",
+						"model",
+						"llm",
+						"loadTogpu"
+					]
+				},
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"data\": {\r\n\t\t\"baseModelDir\": \"C:\\\\test\\\\modelservice\\\\models\\\\llm\",\r\n\t\t\"modelNames\": [\"Phi4_FP16-3.8B-Q41-g32d-0828-v1.1.0.gguf\", \"mmproj-model-f16-9slice-0821.gguf\"],\r\n\t\t\"OptionParams\":\r\n\t\t{\r\n\t\t\t\"temperature\": 0,\r\n\t\t\t\"top_p\": 0.9,\r\n\t\t\t\"top_k\": 5,\r\n\t\t\t\"n_predict\": 2048,\r\n\t\t\t\"n_ctx\": 8192,\r\n            \"on_log\":5,\r\n            \"repeat_penalty\":1.0\r\n\t\t}\r\n\t},\r\n\t\"status\": 0\r\n}"
+				},
+				"auth": {
+					"type": "noauth",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						}
+					],
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					],
+					"basic": [
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"description": ""
+			}
+		},
+		{
+			"name": "model_call",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"item": [
+				{
+					"name": "intents",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://127.0.0.1:35253/upload",
+							"host": [
+								"http"
+							],
+							"query": [],
+							"variable": [],
+							"path": [
+								"127.0.0.1:35253",
+								"upload"
+							]
+						},
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"model_call\",\r\n    \"data\": {\r\n        \"text\": \"{\\\"modelName\\\": \\\"me5s\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"text\\\":\\\"hello world.\\\",\\\"action\\\":\\\"intents\\\"}\"\r\n    }\r\n}"
+						},
+						"auth": {
+							"type": "noauth",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"description": ""
+					}
+				},
+				{
+					"name": "retrieval",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://127.0.0.1:35253/upload",
+							"host": [
+								"http"
+							],
+							"query": [],
+							"variable": [],
+							"path": [
+								"127.0.0.1:35253",
+								"upload"
+							]
+						},
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"model_call\",\r\n    \"data\": {\r\n        \"text\": \"{\\\"modelName\\\": \\\"me5s\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"text\\\":\\\"hello world.\\\",\\\"action\\\":\\\"retrieval\\\"}\"\r\n    }\r\n}"
+						},
+						"auth": {
+							"type": "noauth",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"description": ""
+					}
+				},
+				{
+					"name": "clip_text",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://127.0.0.1:35253/upload",
+							"host": [
+								"http"
+							],
+							"query": [],
+							"variable": [],
+							"path": [
+								"127.0.0.1:35253",
+								"upload"
+							]
+						},
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"model_call\",\r\n    \"data\": {\r\n        \"text\": \"{\\\"modelName\\\": \\\"cliptext\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"text\\\":\\\"hello world.\\\"}\"\r\n    }\r\n}"
+						},
+						"auth": {
+							"type": "noauth",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"description": ""
+					}
+				},
+				{
+					"name": "me5s_embedding",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://127.0.0.1:35253/upload",
+							"host": [
+								"http"
+							],
+							"query": [],
+							"variable": [],
+							"path": [
+								"127.0.0.1:35253",
+								"upload"
+							]
+						},
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"model_call\",\r\n    \"data\": {\r\n        \"text\": \"{\\\"modelName\\\": \\\"me5s\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"text\\\":\\\"hello world.\\\",\\\"action\\\":\\\"embedding\\\"}\"\r\n    }\r\n}"
+						},
+						"auth": {
+							"type": "noauth",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"description": ""
+					}
+				},
+				{
+					"name": "textdet",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://127.0.0.1:35253/upload",
+							"host": [
+								"http"
+							],
+							"query": [],
+							"variable": [],
+							"path": [
+								"127.0.0.1:35253",
+								"upload"
+							]
+						},
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"model_call\",\r\n    \"data\": {\r\n        \"text\": \"{\\\"modelName\\\": \\\"textdet\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"image_url\\\":\\\"c:\\\\\\\\test.jpg\\\"}\"\r\n    }\r\n}"
+						},
+						"auth": {
+							"type": "noauth",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"description": ""
+					}
+				},
+				{
+					"name": "cz_controlnet_generate",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://127.0.0.1:35253/upload",
+							"host": [
+								"http"
+							],
+							"query": [],
+							"variable": [],
+							"path": [
+								"127.0.0.1:35253",
+								"upload"
+							]
+						},
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"model_call\",\r\n    \"data\": {\r\n        \"text\": \"{\\\"modelName\\\": \\\"creatorzone\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"data\\\":{\\\"data\\\":{\\\"controlNetImgPath\\\":\\\"D:/quantum/test.png\\\",\\\"encrypt\\\":0,\\\"controlNetType\\\":\\\"openpose\\\",\\\"controlNetstrength\\\":1.0,\\\"prompt\\\":\\\"generate a dog\\\",\\\"imgNumber\\\":1,\\\"cfgScale\\\":7.0,\\\"outputHeight\\\":512,\\\"outputWidth\\\":512,\\\"steps\\\":20,\\\"seed\\\":42},\\\"status\\\":0},\\\"action\\\":\\\"controlnet_generate\\\"}\"\r\n    }\r\n}"
+						},
+						"auth": {
+							"type": "noauth",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"description": ""
+					}
+				},
+				{
+					"name": "layout",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://127.0.0.1:35253/upload",
+							"host": [
+								"http"
+							],
+							"query": [],
+							"variable": [],
+							"path": [
+								"127.0.0.1:35253",
+								"upload"
+							]
+						},
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"model_call\",\r\n    \"data\": {\r\n        \"text\": \"{\\\"modelName\\\": \\\"layout\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"image_url\\\":\\\"c:\\\\\\\\test.jpg\\\"}\"\r\n    }\r\n}"
+						},
+						"auth": {
+							"type": "noauth",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"description": ""
+					}
+				},
+				{
+					"name": "llm",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://127.0.0.1:35253/upload",
+							"host": [
+								"http"
+							],
+							"query": [],
+							"variable": [],
+							"path": [
+								"127.0.0.1:35253",
+								"upload"
+							]
+						},
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"model_call\",\r\n    \"data\": {\r\n        \"text\": \"{\\\"modelName\\\": \\\"llm\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"prompt\\\":\\\"{\\\\\\\"messages\\\\\\\":[{\\\\\\\"role\\\\\\\":\\\\\\\"system\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"You are a helpful assistant.\\\\\\\"},{\\\\\\\"role\\\\\\\":\\\\\\\"user\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"who are you?\\\\\\\"}],\\\\\\\"stream\\\\\\\":false}\\\"}\"\r\n    }\r\n}"
+						},
+						"auth": {
+							"type": "noauth",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"description": ""
+					}
+				},
+				{
+					"name": "clip_image",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://127.0.0.1:35253/upload",
+							"host": [
+								"http"
+							],
+							"query": [],
+							"variable": [],
+							"path": [
+								"127.0.0.1:35253",
+								"upload"
+							]
+						},
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"model_call\",\r\n    \"data\": {\r\n        \"text\": \"{\\\"modelName\\\": \\\"clipimage\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"image_url\\\":\\\"c:\\\\\\\\test.jpg\\\"}\"\r\n    }\r\n}"
+						},
+						"auth": {
+							"type": "noauth",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"description": ""
+					}
+				},
+				{
+					"name": "domain",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://127.0.0.1:35253/upload",
+							"host": [
+								"http"
+							],
+							"query": [],
+							"variable": [],
+							"path": [
+								"127.0.0.1:35253",
+								"upload"
+							]
+						},
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"model_call\",\r\n    \"data\": {\r\n        \"text\": \"{\\\"modelName\\\": \\\"me5s\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"text\\\":\\\"hello world.\\\",\\\"action\\\":\\\"domain\\\"}\"\r\n    }\r\n}"
+						},
+						"auth": {
+							"type": "noauth",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"description": ""
+					}
+				},
+				{
+					"name": "cz_generate",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://127.0.0.1:35253/upload",
+							"host": [
+								"http"
+							],
+							"query": [],
+							"variable": [],
+							"path": [
+								"127.0.0.1:35253",
+								"upload"
+							]
+						},
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"model_call\",\r\n    \"data\": {\r\n        \"text\": \"{\\\"modelName\\\":\\\"creatorzone\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"data\\\":{\\\"data\\\":{\\\"language\\\":2,\\\"useT5TextEncoder\\\":0,\\\"encrypt\\\":0,\\\"deviceName\\\":\\\"Yoga Pro 7 14IMH9\\\",\\\"userid\\\":\\\"10254893117\\\",\\\"promptid\\\":0,\\\"createType\\\":0,\\\"scale\\\":0,\\\"prompt\\\":\\\"a lovely cat. \\\",\\\"negativePrompt\\\":\\\"None\\\",\\\"imgNumber\\\":3,\\\"cfgScale\\\":2.5,\\\"strength\\\":0.54,\\\"outputHeight\\\":512,\\\"outputWidth\\\":512,\\\"steps\\\":8,\\\"seed\\\":0,\\\"verbose\\\":0,\\\"saveImgPath\\\":\\\"C:/Users/test_wa/AppData/Local/Temp/Runtime/Cache/\\\",\\\"serialNo\\\":\\\"\\\",\\\"IsLaa\\\":1},\\\"userid\\\":\\\"10254893117\\\",\\\"status\\\":0},\\\"action\\\":\\\"generate\\\"}\"\r\n    }\r\n}"
+						},
+						"auth": {
+							"type": "noauth",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"description": ""
+					}
+				},
+				{
+					"name": "get_result",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://127.0.0.1:35253/query?fileData=-1",
+							"host": [
+								"http"
+							],
+							"query": [
+								{
+									"key": "fileData",
+									"value": "-1"
+								}
+							],
+							"variable": [],
+							"path": [
+								"127.0.0.1:35253",
+								"query"
+							]
+						},
+						"header": [],
+						"body": {
+							"mode": "none",
+							"raw": "{}"
+						},
+						"auth": {
+							"type": "noauth",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"description": ""
+					}
+				},
+				{
+					"name": "llm_stream",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://127.0.0.1:35253/upload",
+							"host": [
+								"http"
+							],
+							"query": [],
+							"variable": [],
+							"path": [
+								"127.0.0.1:35253",
+								"upload"
+							]
+						},
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"command\": \"model_call\",\r\n    \"data\": {\r\n        \"text\": \"{\\\"modelName\\\": \\\"llm\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"prompt\\\":\\\"{\\\\\\\"messages\\\\\\\":[{\\\\\\\"role\\\\\\\":\\\\\\\"system\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"You are a helpful assistant.\\\\\\\"},{\\\\\\\"role\\\\\\\":\\\\\\\"user\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"who are you?\\\\\\\"}],\\\\\\\"stream\\\\\\\":true}\\\"}\"\r\n    }\r\n}"
+						},
+						"auth": {
+							"type": "noauth",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							],
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"description": ""
+					}
+				}
+			]
+		},
+		{
+			"name": "model service pipe",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"item": [
+				{
+					"name": "textdet",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"item": [
+						{
+							"name": "textdet推理",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"serverName\": \"modelService\",\r\n\t\"methodName\": \"modelServiceMethod\",\r\n\t\"httpMethod\": \"post\",\r\n\t\"headers\": null,\r\n\t\"parameters\": null,\r\n\t\"uri\": \"/app/v1/infer/textdet/completion\",\r\n\t\"timeout\": 100000,\r\n\t\"requestBody\": \"{\\\"image_url\\\": \\\"D:\\\\\\\\1.jpg\\\" }\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "textdet卸载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"serverName\": \"modelService\",\r\n\t\"methodName\": \"modelServiceMethod\",\r\n\t\"httpMethod\": \"patch\",\r\n\t\"headers\": null,\r\n\t\"parameters\": null,\r\n\t\"uri\": \"/app/v1/model/textdet/unload\",\r\n\t\"timeout\": 10000,\r\n\t\"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "textdet加载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"serverName\": \"modelService\",\r\n\t\"methodName\": \"modelServiceMethod\",\r\n\t\"httpMethod\": \"patch\",\r\n\t\"headers\": null,\r\n\t\"parameters\": null,\r\n\t\"uri\": \"/app/v1/model/textdet/load\",\r\n\t\"timeout\": 10000,\r\n\t\"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						}
+					]
+				},
+				{
+					"name": "quantum",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"item": [
+						{
+							"name": "language",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:35253/upload",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:35253",
+										"upload"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"command\": \"model_call\",\r\n  \"data\": {\r\n    \"text\": \"{\\\"modelName\\\":\\\"me5s\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"text\\\":\\\"D:\\\\\\\\1.jpg\\\",\\\"action\\\":\\\"language\\\"}\"\r\n  }\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "creator_zone",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:35253/upload",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:35253",
+										"upload"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"command\": \"model_call\",\r\n    \"data\": {\r\n        \"text\": \"{\\\"modelName\\\":\\\"creatorzone\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"data\\\":{\\\"model_type\\\":\\\"controlnet_generate\\\",\\\"data\\\":{\\\"controlNetImgPath\\\":\\\"D:/quantum/controlnet/test.png\\\",\\\"encrypt\\\":0,\\\"controlNetType\\\":\\\"openpose\\\",\\\"controlNetstrength\\\":1.0,\\\"prompt\\\":\\\"generate a dog\\\",\\\"imgNumber\\\":1,\\\"cfgScale\\\":7.0,\\\"outputHeight\\\":512,\\\"outputWidth\\\":512,\\\"steps\\\":20,\\\"seed\\\":42},\\\"status\\\":0},\\\"action\\\":\\\"controlnet_generate\\\"}\"\r\n    }\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "rewrite",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:35253/upload",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:35253",
+										"upload"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"command\": \"model_call\",\r\n  \"data\": {\r\n    \"text\": \"{\\\"modelName\\\":\\\"me5s\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"text\\\":\\\"D:\\\\\\\\1.jpg\\\",\\\"action\\\":\\\"retrieval\\\"}\"\r\n  }\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "layout",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:35253/upload",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:35253",
+										"upload"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"command\": \"model_call\",\r\n  \"data\": {\r\n    \"text\": \"{\\\"modelName\\\":\\\"layout\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"image_url\\\":\\\"D:\\\\\\\\1.jpg\\\"}\"\r\n  }\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "domain",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:35253/upload",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:35253",
+										"upload"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"command\": \"model_call\",\r\n  \"data\": {\r\n    \"text\": \"{\\\"modelName\\\":\\\"me5s\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"prompt\\\":\\\"D:\\\\\\\\1.jpg\\\"}\"\r\n  }\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "llm",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:35253/upload",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:35253",
+										"upload"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"command\": \"model_call\",\r\n  \"data\": {\r\n    \"text\": \"{\\\"modelName\\\":\\\"llm\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"prompt\\\":\\\"{\\\\\\\"messages\\\\\\\":[{\\\\\\\"role\\\\\\\":\\\\\\\"system\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"You are a helpful assistant.\\\\\\\"},{\\\\\\\"role\\\\\\\":\\\\\\\"user\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"who are you?\\\\\\\"}],\\\\\\\"stream\\\\\\\":true}\\\"}\"\r\n  }\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "query",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"url": {
+									"raw": "127.0.0.1:35253/query?fileData=1379910560756144441",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:35253"
+									],
+									"query": [
+										{
+											"key": "fileData",
+											"value": "1379910560756144441"
+										}
+									],
+									"variable": [],
+									"path": [
+										"query"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "none",
+									"raw": "{}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "me5s",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:35253/upload",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:35253",
+										"upload"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"command\": \"model_call\",\r\n  \"data\": {\r\n    \"text\": \"{\\\"modelName\\\":\\\"me5s\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"text\\\":\\\"D:\\\\\\\\1.jpg\\\",\\\"action\\\":\\\"embedding\\\"}\"\r\n  }\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "textdet",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:35253/upload",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:35253",
+										"upload"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"command\": \"model_call\",\r\n  \"data\": {\r\n    \"text\": \"{\\\"modelName\\\":\\\"textdet\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"image_url\\\":\\\"D:\\\\\\\\1.jpg\\\"}\"\r\n  }\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "cliptext",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:35253/upload",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:35253",
+										"upload"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"command\": \"model_call\",\r\n  \"data\": {\r\n    \"text\": \"{\\\"modelName\\\":\\\"cliptext\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"text\\\":\\\"D:\\\\\\\\1.jpg\\\"}\"\r\n  }\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "clipimage",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:35253/upload",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:35253",
+										"upload"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"command\": \"model_call\",\r\n  \"data\": {\r\n    \"text\": \"{\\\"modelName\\\":\\\"clipimage\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"image_url\\\":\\\"D:\\\\\\\\1.jpg\\\"}\"\r\n  }\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "copynet",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:35253/upload",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:35253",
+										"upload"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"command\": \"model_call\",\r\n  \"data\": {\r\n    \"text\": \"{\\\"modelName\\\":\\\"me5s\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"text\\\":\\\"D:\\\\\\\\1.jpg\\\",\\\"action\\\":\\\"copynet\\\"}\"\r\n  }\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "intent",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:35253/upload",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:35253",
+										"upload"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"command\": \"model_call\",\r\n  \"data\": {\r\n    \"text\": \"{\\\"modelName\\\":\\\"me5s\\\",\\\"modelVersion\\\":\\\"1.0\\\",\\\"text\\\":\\\"D:\\\\\\\\1.jpg\\\",\\\"action\\\":\\\"intents\\\"}\"\r\n  }\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						}
+					]
+				},
+				{
+					"name": "layout",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"item": [
+						{
+							"name": "layout卸载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"serverName\": \"modelService\",\r\n\t\"methodName\": \"modelServiceMethod\",\r\n\t\"httpMethod\": \"patch\",\r\n\t\"headers\": null,\r\n\t\"parameters\": null,\r\n\t\"uri\": \"/app/v1/model/layout/unload\",\r\n\t\"timeout\": 10000,\r\n\t\"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "layout推理",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"serverName\": \"modelService\",\r\n\t\"methodName\": \"modelServiceMethod\",\r\n\t\"httpMethod\": \"post\",\r\n\t\"headers\": null,\r\n\t\"parameters\": null,\r\n\t\"uri\": \"/app/v1/infer/layout/completion\",\r\n\t\"timeout\": 100000,\r\n\t\"requestBody\": \"{\\\"image_url\\\": [\\\"D:/image/0.jpg\\\",\\\"D:/image/1.jpg\\\",\\\"D:/image/2.jpg\\\",\\\"D:/image/3.jpg\\\",\\\"D:/image/4.jpg\\\",\\\"D:/image/5.jpg\\\",\\\"D:/image/6.jpg\\\",\\\"D:/image/7.jpg\\\"] }\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "layout加载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"serverName\": \"modelService\",\r\n\t\"methodName\": \"modelServiceMethod\",\r\n\t\"httpMethod\": \"patch\",\r\n\t\"headers\": null,\r\n\t\"parameters\": null,\r\n\t\"uri\": \"/app/v1/model/layout/load\",\r\n\t\"timeout\": 10000,\r\n\t\"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "ocr",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"serverName\": \"modelService\",\r\n\t\"methodName\": \"modelServiceMethod\",\r\n\t\"httpMethod\": \"post\",\r\n\t\"headers\": null,\r\n\t\"parameters\": null,\r\n\t\"uri\": \"/app/v1/infer/ocr/query\",\r\n\t\"timeout\": 100000,\r\n\t\"requestBody\": \"{\\\"image\\\": \\\"D:\\\\\\\\1.jpg\\\" }\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						}
+					]
+				},
+				{
+					"name": "LLM",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"item": [
+						{
+							"name": "9.分词接口",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"uri\": \"/app/v1/infer/llm/token\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"{\\\"prompt\\\": [\\\"您好这种情况一般称为面挤挛与精神因素有密切的关系的轻微的一段时间可以自行恢复。这种情况应该是神经性的可以到神经内科或者针灸科检查治疗一般来说效果应该是有的药物一般可以用卡马西平等治疗避免精神紧张避免劳累希望我的回答对您有帮助祝早日康复\\\"] }\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "10. 大模型非流式推理",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"uri\": \"/v1/chat/completions\",\r\n    \"httpMethod\": \"post\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"{\\\"messages\\\": [{\\\"role\\\": \\\"system\\\",\\\"content\\\": \\\"You are a helpful assistant.\\\"},{\\\"role\\\": \\\"user\\\",\\\"content\\\": \\\"who are you?\\\"}]}\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "6. 加载模型",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"uri\": \"/app/v1/model/llm/loadTogpu\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "5. 预热模型",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"uri\": \"/app/v1/model/llm/warmup\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "8.停止接口",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"uri\": \"/app/v1/infer/llm/stop\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "4. 模型状态",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"uri\": \"/app/v1/model/llm/status\",\r\n    \"httpMethod\": \"get\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "7. 卸载模型",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"uri\": \"/app/v1/model/llm/loadTogpu\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "11. 大模型流式推理",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmitWithFlowResponse",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmitWithFlowResponse"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService_Stream\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"uri\": \"/v1/chat/completions\",\r\n    \"httpMethod\": \"post\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"{\\\"stream\\\":true,\\\"messages\\\": [{\\\"role\\\": \\\"system\\\",\\\"content\\\": \\\"You are a helpful assistant.\\\"},{\\\"role\\\": \\\"user\\\",\\\"content\\\": \\\"who are you?\\\"}]}\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						}
+					]
+				},
+				{
+					"name": "getlang",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"item": [
+						{
+							"name": "getlang加载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"serverName\": \"modelService\",\r\n\t\"methodName\": \"modelServiceMethod\",\r\n\t\"httpMethod\": \"patch\",\r\n\t\"headers\": null,\r\n\t\"parameters\": null,\r\n\t\"uri\": \"/app/v1/model/getlang/load\",\r\n\t\"timeout\": 10000,\r\n\t\"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "getlang推理",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"serverName\": \"modelService\",\r\n\t\"methodName\": \"modelServiceMethod\",\r\n\t\"httpMethod\": \"post\",\r\n\t\"headers\": null,\r\n\t\"parameters\": null,\r\n\t\"uri\": \"/app/v1/infer/getlang/completion\",\r\n\t\"timeout\": 100000,\r\n\t\"requestBody\": \"{\\\"prompt\\\": \\\"你好\\\" }\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						}
+					]
+				},
+				{
+					"name": "ME5S",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"item": [
+						{
+							"name": "21.Intent加载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/Intent/loadTocpu\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "23.retrieval状态",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"get\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/copynet/status\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "22.domain卸载 ",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/domain/unloadFromcpu\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "23.状态",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"get\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/me5s/status\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "23.domain状态",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"get\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/domain/status\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "25.意图查询",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"post\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/infer/me5s/domain\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"{\\\"batch_text\\\": [\\\"Bump the brightness up to 90 percent.\\\"] }\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "21.domain加载 ",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/domain/loadTocpu\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "23.copynet状态",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"get\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/copynet/status\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "21.copynet加载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/copynet/loadTocpu\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "21.retrieval加载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/retrieval/loadTocpu\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "22.卸载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/me5s/unloadFromcpu\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "22.Intent卸载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/Intent/unloadFromcpu\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "copynet",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"post\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/infer/me5s/copynet\",\r\n    \"timeout\": 100000,\r\n    \"requestBody\": \"{\\\"batch_text\\\": [\\\"please introduce the lenovo company\\\"] }\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "24.推理提embedding",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"post\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/infer/me5s/completion\",\r\n    \"timeout\": 100000,\r\n    \"requestBody\": \"{\\\"batch_text\\\": [\\\"please introduce the lenovo company\\\",\\\"hello world\\\"] }\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "22.retriveal卸载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/retrieval/unloadFromcpu\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "21.加载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/me5s/loadTocpu\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "22.copynet卸载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/copynet/unloadFromcpu\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "23.Intent状态",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"get\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/Intent/status\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "26.retrieval判断",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"post\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/infer/me5s/retrieval\",\r\n    \"timeout\": 10000000,\r\n    \"requestBody\": \"{\\\"batch_text\\\": [\\\"韩国人去香港要签证吗\\\"] }\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						}
+					]
+				},
+				{
+					"name": "CLIP",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"item": [
+						{
+							"name": "13.text 卸载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/clip/unloadTextModel\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "19. image模型推理",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"post\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/infer/clip/image_completion\",\r\n    \"timeout\": 100000,\r\n    \"requestBody\": \"{\\\"image\\\": \\\"D:\\\\\\\\xuyx25_life_43.jpg\\\" }\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "17.image 模型状态",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"get\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/clip/statusImageModel\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "16.text 模型状态",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"get\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/clip/statusTextModel\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "15.image 卸载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/clip/unloadImageModel\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "14.image 加载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/clip/loadImageTocpu\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "18. text 模型推理",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"post\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/infer/clip/text_completion\",\r\n    \"timeout\": 100000,\r\n    \"requestBody\": \"{\\\"text\\\": \\\"please introduce the lenovo company\\\" }\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						},
+						{
+							"name": "12.text 加载",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"url": {
+									"raw": "http://127.0.0.1:8090/api/v1/transmit/doTransmit",
+									"host": [
+										"http"
+									],
+									"query": [],
+									"variable": [],
+									"path": [
+										"127.0.0.1:8090",
+										"api",
+										"v1",
+										"transmit",
+										"doTransmit"
+									]
+								},
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverName\": \"modelService\",\r\n    \"methodName\": \"modelServiceMethod\",\r\n    \"httpMethod\": \"patch\",\r\n    \"headers\": null,\r\n    \"parameters\": null,\r\n    \"uri\": \"/app/v1/model/clip/loadTextTocpu\",\r\n    \"timeout\": 10000,\r\n    \"requestBody\": \"\"\r\n}"
+								},
+								"auth": {
+									"type": "noauth",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									],
+									"basic": [
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": ""
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

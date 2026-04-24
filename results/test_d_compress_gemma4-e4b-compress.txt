@@ -1,0 +1,46 @@
+模型: gemma4-e4b-compress
+冷启动时间: 63.55s
+首Token响应时间(TTFT): 187346.10ms (热启)
+总响应时间: 316.87s (热启)
+吞吐量: 1.93 token/s (热启)
+Token数: 612
+输入字符数: 44105
+输出字符数: 2069
+压缩比: 21.32x
+
+================================================================================
+压缩结果:
+================================================================================
+### Context Compression Summary
+
+**Overall Intent:** The user engaged in multiple distinct tasks, including product research, memory retrieval, memory storage, and calendar management.
+
+**Turn 1: Product Research (Lenovo Yoga Tab Pro)**
+*   **Goal:** Search for reviews and specifications of the Lenovo Yoga Tab Pro.
+*   **Tool Used:** `web_search_grounding` (ID: `call_19WEdIRZPlgljMgnXC83nl5T`).
+*   **Outcome:** Successful.
+*   **Key Specifications Retrieved:**
+    *   **Display:** 12.7-inch, 2944 x 1840 pixels, 144 Hz refresh rate, 900 nits peak brightness.
+    *   **Processor:** Qualcomm Snapdragon 8 Gen 3.
+    *   **Memory/Storage:** Up to 16GB LPDDR5X RAM / 512GB UFS 4.0.
+    *   **Battery:** 10,200mAh with 68W fast charging.
+    *   **Audio:** Six Harman Kardon-tuned speakers with Dolby Atmos.
+    *   **Features:** Stylus support (4ms response), Wi-Fi 7, side fingerprint sensor.
+    *   **Price:** ~$700–$750 USD.
+    *   **Reviews Summary:** Praised for premium build, display, and performance; noted drawbacks include lack of cellular support and no expandable storage.
+
+**Turn 2 & 3: Memory Retrieval**
+*   **Goal:** Check for stored information regarding allergies and favorite color.
+*   **Outcome:** Both memory lookups returned no relevant entries.
+
+**Turn 4: Memory Storage (Preferences & Health)**
+*   **Goal:** Store "favorite color is blue" and "allergy to flower pollen."
+*   **Tool Used:** `manage_memory` (Two calls: one for color, one for allergy).
+*   **Outcome:** Failed.
+*   **Error Details:** Both attempts failed with the error message: `"unable to open database file"`. No information was persisted.
+
+**Turn 5: Calendar Event Creation**
+*   **Goal:** Schedule "Quarterly Planning" on April 29, 1 PM to 4 PM, at HQ 5F War Room, inviting MENGRUI.
+*   **Tool Used:** `LocalAgent_APP_add_calendar_event_on_pc` (ID: `call_wYAxSwc4CGSZsgDRwOscGIr3`).
+*   **Outcome:** Failed.
+*   **Error Details:** The tool returned a temporary failure message: `"我暂时无法更新您的日历。请稍后再试。"` (I temporarily cannot update your calendar. Please try again later.)

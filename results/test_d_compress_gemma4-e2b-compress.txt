@@ -1,0 +1,40 @@
+模型: gemma4-e2b-compress
+冷启动时间: 16.08s
+首Token响应时间(TTFT): 14257.76ms (热启)
+总响应时间: 21.16s (热启)
+吞吐量: 25.75 token/s (热启)
+Token数: 545
+输入字符数: 44105
+输出字符数: 1838
+压缩比: 24.00x
+
+================================================================================
+压缩结果:
+================================================================================
+*   **Turn 1: Product Research (Lenovo Yoga Tab Pro)**
+    *   **Goal:** Search for reviews and specifications of the Lenovo Yoga Tab Pro.
+    *   **Tool Used:** `web_search_grounding`.
+    *   **Key Findings:**
+        *   **Display:** 12.7-inch, 2944 x 1840 pixels, 144 Hz, up to 900 nits peak brightness, Gorilla Glass 7i.
+        *   **Processor:** Qualcomm Snapdragon 8 Gen 3.
+        *   **Memory/Storage:** Up to 16GB LPDDR5X RAM, up to 512GB UFS 4.0 storage.
+        *   **Battery:** 10,200mAh with 68W fast charging.
+        *   **Audio:** Six Harman Kardon-tuned speakers with Dolby Atmos.
+        *   **OS:** Android with Lenovo ZUXOS skin, supports Android 15.
+        *   **Pros:** Premium build, powerful CPU, excellent display, long battery life, responsive stylus.
+        *   **Cons:** No cellular support, no expandable storage, only fingerprint biometric.
+        *   **Price:** ~$700–$750 USD (CNY 4,799 for top variant).
+
+*   **Turn 2: Memory Lookup (Allergies)**
+    *   **Goal:** Check for stored memory regarding allergies.
+    *   **Result:** No memory entries found regarding allergies.
+
+*   **Turn 3: Memory Persistence Attempt (Failed)**
+    *   **User Input:** Stated favorite color is blue and allergy to flower pollen.
+    *   **Actions:** Attempted to add both facts to memory using `manage_memory`.
+    *   **Result:** Both memory write operations failed with the error: "unable to open database file." No information was persisted.
+
+*   **Turn 5: Calendar Event Creation (Failed)**
+    *   **Goal:** Create a calendar event: "Quarterly Planning" on April 29 from 1:00 PM to 4:00 PM at HQ 5F War Room, inviting MENGRUI.
+    *   **Tool Used:** `LocalAgent_APP_add_calendar_event_on_pc`.
+    *   **Result:** The event creation failed with the error: "我暂时无法更新您的日历。请稍后再试。" (Temporary calendar update failure).

@@ -1,0 +1,26 @@
+模型: phi4-mini-compress
+冷启动时间: 8.10s
+首Token响应时间(TTFT): 2508.61ms (热启)
+总响应时间: 5.70s (热启)
+吞吐量: 18.76 token/s (热启)
+Token数: 107
+输入字符数: 2786
+输出字符数: 302
+压缩比: 9.23x
+
+================================================================================
+压缩结果:
+================================================================================
+{
+  "session_summary": [
+    {
+      "total_assets_CNY": 1250000,
+      "cumulative_return_3M_percent": "+6.1%",
+      "gold_rebalance_ratio": 0.5
+    },
+    {
+      "recommended_bond_name_AAA_rating": ["招商招祥纯债A", "易方达稳健收益"],
+      "bond_volatility_range_percentage": [0.15, 0.22]
+    }
+  ]
+}<|im_end|>

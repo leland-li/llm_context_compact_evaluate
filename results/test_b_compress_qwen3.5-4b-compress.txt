@@ -1,0 +1,58 @@
+模型: qwen3.5-4b-compress
+冷启动时间: 2.92s
+首Token响应时间(TTFT): 6153.45ms (热启)
+总响应时间: 15.67s (热启)
+吞吐量: 37.85 token/s (热启)
+Token数: 593
+输入字符数: 29469
+输出字符数: 1832
+压缩比: 16.09x
+
+================================================================================
+压缩结果:
+================================================================================
+# Session Compression Summary
+
+**Session ID:** `6f1b2c3d-4e5f-4789-a123-b456c789d012`
+**Total Tokens:** 3,416
+**Status:** Completed (3 Turns)
+
+### Turn 1: Greeting
+*   **Intent:** User greeting.
+*   **User Input:** "hello"
+*   **Assistant Response:** "Hello! How can I assist you today? If you have a task, question, or need help with files or images, just let me know."
+*   **Outcome:** Succeeded.
+
+### Turn 2: Email Drafting
+*   **Intent:** Send email to `john.smith@example.com` regarding a 3 PM meeting start.
+*   **User Input:** "Email john.smith@example.com and tell him the meeting starts at 3 PM."
+*   **Tool Execution:**
+    *   **Tool:** `LocalAgent_APP_send_email_on_pc`
+    *   **Call ID:** `4d5e6f70`
+    *   **Parameters:**
+        *   Recipients: `john.smith@example.com`
+        *   Subject: `Meeting Time Update`
+        *   Body: `Hello John, Just a quick note to let you know that the meeting starts at 3 PM. Best regards`
+    *   **Result:** Success (`status`: "成功", `code`: "确定").
+    *   **Latency:** 1,558 ms.
+*   **Assistant Response:** Confirmed the email draft was sent.
+
+### Turn 3: Teams Messaging
+*   **Intent:** Notify `mengrui` on Teams about budget approval.
+*   **User Input:** "Tell mengrui on Teams that I approved the budget."
+*   **Tool Execution:**
+    *   **Tool:** `LocalAgent_APP_send_message_on_pc`
+    *   **Call ID:** `5e6f7081`
+    *   **Parameters:**
+        *   App: `Teams`
+        *   Person: `mengrui`
+        *   Message: `I approved the budget.`
+    *   **Result:** Success (`status`: "成功", `code`: "确定").
+    *   **Latency:** 13,563 ms.
+*   **Assistant Response:** Confirmed the message was sent to Mengrui.
+
+### Key Metrics
+*   **Total Tool Calls:** 2
+*   **Success Rate:** 100%
+*   **Total Latency:** ~21,479 ms (excluding Turn 1)
+*   **Memory Status:** Empty across all turns.

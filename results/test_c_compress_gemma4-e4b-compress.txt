@@ -1,0 +1,36 @@
+模型: gemma4-e4b-compress
+冷启动时间: 74.41s
+首Token响应时间(TTFT): 122443.71ms (热启)
+总响应时间: 214.14s (热启)
+吞吐量: 1.94 token/s (热启)
+Token数: 415
+输入字符数: 20177
+输出字符数: 1361
+压缩比: 14.83x
+
+================================================================================
+压缩结果:
+================================================================================
+*   **Session Overview:**
+    *   **Session ID:** `qira_hybrid_orchestration_20260420_144439_hi_weather`
+    *   **Objective:** Fulfill a multi-step request, starting with a greeting and progressing to a weather lookup.
+
+*   **Turn 1: Initial Greeting**
+    *   **User Input:** `hi`
+    *   **Action:** Assistant provided a standard greeting and offered assistance.
+
+*   **Turn 2: Weather Lookup (Beijing)**
+    *   **User Request:** "tell me weather of beijing today"
+    *   **Tool Execution:**
+        *   **Tool:** `web_search_grounding`
+        *   **Query:** `Beijing weather today`
+        *   **Tool Call ID:** `call_gRnv1RSCtGxUsp5U5gv8S2n8`
+        *   **Execution Time:** 1776667562.396 (Latency: 10830.0 ms)
+    *   **Tool Result Summary (Beijing Weather):**
+        *   **Condition:** Mostly clear.
+        *   **Temperature:** 19°C (66°F) this evening, dropping to 12°C (54°F) overnight.
+        *   **Wind:** Light breeze (6–7 km/h).
+        *   **Precipitation:** None expected.
+        *   **Air Quality:** Very unhealthy (sensitive groups advised to avoid outdoor activities).
+        *   **Daylight Hours:** Sunrise at 5:32 AM; Sunset at 6:56 PM (Total: 13 hours 24 minutes).
+    *   **Final Response:** The assistant delivered a comprehensive summary of the retrieved weather data, highlighting the air quality warning and temperature range.

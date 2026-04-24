@@ -1,0 +1,14 @@
+模型: phi4-mini-compress
+冷启动时间: 8.72s
+首Token响应时间(TTFT): 3780.19ms (热启)
+总响应时间: 7.19s (热启)
+吞吐量: 11.54 token/s (热启)
+Token数: 83
+输入字符数: 20177
+输出字符数: 431
+压缩比: 46.81x
+
+================================================================================
+压缩结果:
+================================================================================
+- User greeted with hi.\n- Assistant responded to greeting and asked how it can assist, offering help for tasks or questions related to files/images.\n- Second turn: user requested weather in Beijing today; assistant acknowledged the request about today's temperature/weather conditions. The tool web_search_grounding was used successfully without previous context as there wasn't any provided by memory module (empty).\n<|im_end|>

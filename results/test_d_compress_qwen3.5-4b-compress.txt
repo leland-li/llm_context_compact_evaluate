@@ -1,0 +1,56 @@
+模型: qwen3.5-4b-compress
+冷启动时间: 8.48s
+首Token响应时间(TTFT): 8383.93ms (热启)
+总响应时间: 17.56s (热启)
+吞吐量: 31.21 token/s (热启)
+Token数: 548
+输入字符数: 44105
+输出字符数: 1703
+压缩比: 25.90x
+
+================================================================================
+压缩结果:
+================================================================================
+### Session Summary
+**Session ID:** `b0d8d4d4-6b0d-4f1c-8d39-d4b95c4b94d4`
+**Total Turns:** 5
+**Total Tokens:** 634
+
+---
+
+### Turn 1: Product Research (Success)
+*   **Objective:** Search web for Lenovo Yoga Tab Pro reviews and specs.
+*   **Action:** Executed `web_search_grounding` tool.
+*   **Result:** Successfully retrieved data.
+    *   **Specs:** Snapdragon 8 Gen 3, 12.7" 144Hz display, 16GB RAM/512GB Storage, 10,200mAh battery.
+    *   **Price:** ~$700-$750 USD.
+    *   **Availability:** Available in China.
+*   **Status:** Completed.
+
+### Turn 2: Memory Lookup (No Data)
+*   **Objective:** Check for stored allergy information.
+*   **Action:** System checked `<User_Memories>`.
+*   **Result:** No entries found.
+*   **Status:** Completed.
+
+### Turn 3: Memory Lookup (No Data)
+*   **Objective:** Check for stored favorite color.
+*   **Action:** System checked `<User_Memories>`.
+*   **Result:** No entries found.
+*   **Status:** Completed.
+
+### Turn 4: Memory Write (Failed)
+*   **Objective:** Store user preferences (Favorite Color: Blue, Allergy: Flower Pollen).
+*   **Action:** Executed `manage_memory` (ADD) twice.
+*   **Result:** **Failed**.
+    *   **Error:** `unable to open database file` (sqlite3.OperationalError).
+    *   **Impact:** No memory persisted for color or allergy.
+*   **Status:** Failed.
+
+### Turn 5: Calendar Creation (Failed)
+*   **Objective:** Create "Quarterly Planning" event (Apr 29, 13:00-16:00, HQ 5F War Room, invite MENGRUI).
+*   **Action:** Executed `LocalAgent_APP_add_calendar_event_on_pc`.
+*   **Result:** **Failed**.
+    *   **Error:** `我暂时无法更新您的日历。请稍后再试。` (Temporary calendar update failure).
+    *   **Impact:** Event not created.
+*   **Status:** Failed.

@@ -1,0 +1,244 @@
+{
+  "test_a": {
+    "gemma4-e2b-compress": {
+      "compressed_length": 1017,
+      "original_length": 2786,
+      "compression_ratio": 0.635,
+      "semantic_similarity": 0.7961,
+      "ppl": 9.208,
+      "ppl_token_count": 307,
+      "recall_rate": 0.8571,
+      "total_key_items": 22,
+      "retained_key_items": 17
+    },
+    "gemma4-e4b-compress": {
+      "compressed_length": 1302,
+      "original_length": 2786,
+      "compression_ratio": 0.5327,
+      "semantic_similarity": 0.787,
+      "ppl": 7.6483,
+      "ppl_token_count": 389,
+      "recall_rate": 0.85,
+      "total_key_items": 21,
+      "retained_key_items": 17
+    },
+    "glm-edge-4b-compress": {
+      "compressed_length": 913,
+      "original_length": 2786,
+      "compression_ratio": 0.6723,
+      "semantic_similarity": 0.8204,
+      "ppl": 12.1093,
+      "ppl_token_count": 235,
+      "recall_rate": 0.6,
+      "total_key_items": 21,
+      "retained_key_items": 13
+    },
+    "phi4-mini-compress": {
+      "compressed_length": 302,
+      "original_length": 2786,
+      "compression_ratio": 0.8916,
+      "semantic_similarity": 0.7141,
+      "ppl": 17.7784,
+      "ppl_token_count": 107,
+      "recall_rate": 0.35,
+      "total_key_items": 21,
+      "retained_key_items": 8
+    },
+    "qwen3.5-4b-compress": {
+      "compressed_length": 1031,
+      "original_length": 2786,
+      "compression_ratio": 0.6299,
+      "semantic_similarity": 0.8351,
+      "ppl": 11.5629,
+      "ppl_token_count": 326,
+      "recall_rate": 0.95,
+      "total_key_items": 21,
+      "retained_key_items": 20
+    }
+  },
+  "test_b": {
+    "gemma4-e2b-compress": {
+      "compressed_length": 624,
+      "original_length": 29469,
+      "compression_ratio": 0.9788,
+      "semantic_similarity": 0.6594,
+      "ppl": 7.9245,
+      "ppl_token_count": 170,
+      "recall_rate": 0.0,
+      "total_key_items": 5,
+      "retained_key_items": 0
+    },
+    "gemma4-e4b-compress": {
+      "compressed_length": 1101,
+      "original_length": 29469,
+      "compression_ratio": 0.9626,
+      "semantic_similarity": 0.6893,
+      "ppl": 5.7911,
+      "ppl_token_count": 314,
+      "recall_rate": 0.0,
+      "total_key_items": 5,
+      "retained_key_items": 0
+    },
+    "glm-edge-4b-compress": {
+      "compressed_length": 214,
+      "original_length": 29469,
+      "compression_ratio": 0.9927,
+      "semantic_similarity": 0.5643,
+      "ppl": 25.6182,
+      "ppl_token_count": 55,
+      "recall_rate": 0.0,
+      "total_key_items": 5,
+      "retained_key_items": 0
+    },
+    "phi4-mini-compress": {
+      "compressed_length": 689,
+      "original_length": 29469,
+      "compression_ratio": 0.9766,
+      "semantic_similarity": 0.6038,
+      "ppl": 17.4503,
+      "ppl_token_count": 167,
+      "recall_rate": 0.17,
+      "total_key_items": 6,
+      "retained_key_items": 1
+    },
+    "qwen3.5-4b-compress": {
+      "compressed_length": 1827,
+      "original_length": 29469,
+      "compression_ratio": 0.938,
+      "semantic_similarity": 0.6946,
+      "ppl": 4.9279,
+      "ppl_token_count": 542,
+      "recall_rate": 0.33,
+      "total_key_items": 6,
+      "retained_key_items": 2
+    }
+  },
+  "test_c": {
+    "gemma4-e2b-compress": {
+      "compressed_length": 1047,
+      "original_length": 20177,
+      "compression_ratio": 0.9481,
+      "semantic_similarity": 0.7178,
+      "ppl": 7.5349,
+      "ppl_token_count": 267,
+      "recall_rate": 0.33,
+      "total_key_items": 6,
+      "retained_key_items": 2
+    },
+    "gemma4-e4b-compress": {
+      "compressed_length": 1359,
+      "original_length": 20177,
+      "compression_ratio": 0.9326,
+      "semantic_similarity": 0.745,
+      "ppl": 8.8862,
+      "ppl_token_count": 365,
+      "recall_rate": 0.33,
+      "total_key_items": 6,
+      "retained_key_items": 2
+    },
+    "glm-edge-4b-compress": {
+      "compressed_length": 985,
+      "original_length": 20177,
+      "compression_ratio": 0.9512,
+      "semantic_similarity": 0.6672,
+      "ppl": 6.7372,
+      "ppl_token_count": 212,
+      "recall_rate": 0.0,
+      "total_key_items": 6,
+      "retained_key_items": 0
+    },
+    "phi4-mini-compress": {
+      "compressed_length": 431,
+      "original_length": 20177,
+      "compression_ratio": 0.9786,
+      "semantic_similarity": 0.6444,
+      "ppl": 116.8923,
+      "ppl_token_count": 84,
+      "recall_rate": 0.17,
+      "total_key_items": 6,
+      "retained_key_items": 1
+    },
+    "qwen3.5-4b-compress": {
+      "compressed_length": 1486,
+      "original_length": 20177,
+      "compression_ratio": 0.9264,
+      "semantic_similarity": 0.7558,
+      "ppl": 8.4086,
+      "ppl_token_count": 438,
+      "recall_rate": 0.33,
+      "total_key_items": 6,
+      "retained_key_items": 2
+    }
+  },
+  "test_d": {
+    "gemma4-e2b-compress": {
+      "compressed_length": 1835,
+      "original_length": 44105,
+      "compression_ratio": 0.9584,
+      "semantic_similarity": 0.765,
+      "ppl": 7.9162,
+      "ppl_token_count": 500,
+      "recall_rate": 0.14,
+      "total_key_items": 7,
+      "retained_key_items": 1
+    },
+    "gemma4-e4b-compress": {
+      "compressed_length": 2064,
+      "original_length": 44105,
+      "compression_ratio": 0.9532,
+      "semantic_similarity": 0.7294,
+      "ppl": 10.3285,
+      "ppl_token_count": 562,
+      "recall_rate": 0.17,
+      "total_key_items": 6,
+      "retained_key_items": 1
+    },
+    "glm-edge-4b-compress": {
+      "compressed_length": 1952,
+      "original_length": 44105,
+      "compression_ratio": 0.9557,
+      "semantic_similarity": 0.571,
+      "ppl": 8.913,
+      "ppl_token_count": 384,
+      "recall_rate": 0.0,
+      "total_key_items": 6,
+      "retained_key_items": 0
+    },
+    "phi4-mini-compress": {
+      "compressed_length": 1119,
+      "original_length": 44105,
+      "compression_ratio": 0.9746,
+      "semantic_similarity": 0.7298,
+      "ppl": 65.9075,
+      "ppl_token_count": 204,
+      "recall_rate": 0.0,
+      "total_key_items": 5,
+      "retained_key_items": 0
+    },
+    "qwen3.5-4b-compress": {
+      "compressed_length": 1697,
+      "original_length": 44105,
+      "compression_ratio": 0.9615,
+      "semantic_similarity": 0.7368,
+      "ppl": 7.2387,
+      "ppl_token_count": 499,
+      "recall_rate": 0.33,
+      "total_key_items": 6,
+      "retained_key_items": 2
+    }
+  },
+  "_meta": {
+    "total_time_s": 973.64,
+    "test_files": [
+      "test_a",
+      "test_b",
+      "test_c",
+      "test_d"
+    ],
+    "evaluators": {
+      "semantic": true,
+      "ppl": true,
+      "recall": true
+    }
+  }
+}

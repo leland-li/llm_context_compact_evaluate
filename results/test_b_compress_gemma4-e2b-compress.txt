@@ -1,0 +1,26 @@
+模型: gemma4-e2b-compress
+冷启动时间: 15.62s
+首Token响应时间(TTFT): 11152.15ms (热启)
+总响应时间: 13.50s (热启)
+吞吐量: 14.00 token/s (热启)
+Token数: 189
+输入字符数: 29469
+输出字符数: 626
+压缩比: 47.08x
+
+================================================================================
+压缩结果:
+================================================================================
+*   **Turn 1: Greeting**
+    *   **User Input:** "hello"
+    *   **Action:** Assistant provided a standard greeting.
+
+*   **Turn 2: Send Email**
+    *   **User Goal:** Email `john.smith@example.com` stating the meeting starts at 3 PM.
+    *   **Tool Used:** `LocalAgent_APP_send_email_on_pc`
+    *   **Result:** Success. An email draft was successfully sent.
+
+*   **Turn 3: Send Teams Message**
+    *   **User Goal:** Tell `mengrui` on Teams that the budget was approved.
+    *   **Tool Used:** `LocalAgent_APP_send_message_on_pc` (for Teams)
+    *   **Result:** Success. The message was successfully sent to Mengrui on Teams.

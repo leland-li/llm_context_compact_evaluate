@@ -1,0 +1,80 @@
+{
+  "session_metadata": {
+    "session_id": "2026-04-21-FIN-001",
+    "user_id": "U12345",
+    "domain": "Wealth Management",
+    "total_turns": 4
+  },
+  "memory_bank": [
+    {
+      "turn": 1,
+      "role": "user",
+      "content": "帮我看一下我现在的账户总资产，另外对比一下过去三个月的收益情况。",
+      "timestamp": "2026-04-21T10:00:00Z"
+    },
+    {
+      "turn": 1,
+      "role": "assistant",
+      "thought_chain": "User wants overview of wealth and historical performance. Need to call balance and PnL tools.",
+      "tool_calls": [
+        {
+          "tool": "get_account_balance",
+          "args": {"user_id": "U12345"},
+          "response": {"total_assets": 1250000, "currency": "CNY", "positions": ["A-share", "Gold", "US-Tech-ETF"]}
+        },
+        {
+          "tool": "get_historical_pnl",
+          "args": {"user_id": "U12345", "period": "3M"},
+          "response": {"Jan": "+2.5%", "Feb": "-1.2%", "Mar": "+4.8%", "cumulative": "+6.1%"}
+        }
+      ],
+      "content": "您当前账户总资产为 125.0 万人民币。过去三个月累计收益为 6.1%。"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "感觉最近金价太高了，我想减持一半黄金，买入一些波动率较低的债券基金，有什么建议？"
+    },
+    {
+      "turn": 2,
+      "role": "assistant",
+      "thought_chain": "Gold is at 2350 USD/oz. Rebalancing to bonds. Need bond search tool.",
+      "tool_calls": [
+        {
+          "tool": "search_low_vol_bonds",
+          "args": {"min_rating": "AAA"},
+          "response": [{"name": "招商招祥纯债A", "vol": "0.15%"}, {"name": "易方达稳健收益", "vol": "0.22%"}]
+        }
+      ],
+      "content": "黄金处于高位，建议减持。为您推荐招商招祥纯债A（波动率0.15%）。"
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "content": "刚才看新闻说美联储可能推迟降息，这对我刚才的计划有影响吗？"
+    },
+    {
+      "turn": 3,
+      "role": "assistant",
+      "content": "推迟降息利好美元压制黄金，支持减持决策；但债市会有短期波动。建议按原计划执行。",
+      "association_tags": ["Macro-Economy", "Fed-Rate", "Gold-Price-Correlation"]
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "既然这样，帮我把黄金减持逻辑写进下周一的自动执行计划里。"
+    },
+    {
+      "turn": 4,
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "tool": "create_scheduled_task",
+          "args": {"asset": "Gold", "ratio": 0.5, "date": "2026-04-27"},
+          "response": {"status": "success", "task_id": "TASK-8890"}
+        }
+      ],
+      "content": "已为您创建预约任务，将于4月27日执行黄金减持。"
+    }
+  ]
+}

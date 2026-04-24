@@ -1,0 +1,14 @@
+模型: phi4-mini-compress
+冷启动时间: 49.70s
+首Token响应时间(TTFT): 6872.35ms (热启)
+总响应时间: 22.18s (热启)
+吞吐量: 9.15 token/s (热启)
+Token数: 203
+输入字符数: 44105
+输出字符数: 1119
+压缩比: 39.41x
+
+================================================================================
+压缩结果:
+================================================================================
+**Summary of Events:**\n1. User requested a web search for Lenovo Yoga Tab Pro reviews and specifications; AI successfully retrieved the information.\n2. The user asked if there was any stored memory about allergies, but none were found in their history.\n3. Inquired whether favorite color preference is remembered by system (blue), which wasn't previously saved due to technical issues with database file access during write attempts for both preferences and allergy details; AI suggested retrying later or providing additional participant information if needed when creating a calendar event failed because the QTCore tool returned an error indicating it couldn't update their day planner at that time.\n4. User attempted again after being prompted, but faced another temporary issue with updating calendars using LocalAgent_APP_add_calendar_event_on_pc; AI suggested trying to add events later or providing additional details for correct invitation delivery as a participant name alone may not suffice in the current context window limit and usage threshold parameters set by compaction configuration.\n<|im_end|>\n

@@ -1,0 +1,9 @@
+﻿.venv/
+__pycache__/
+*.pyc
+*.pyo
+tmp/
+models/
+logs/
+Modelfile.tmp
+Modelfile.qwen.tmp

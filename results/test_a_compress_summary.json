@@ -1,0 +1,52 @@
+{
+  "qwen3.5-4b-compress": {
+    "coldstart_time_s": 2.87,
+    "ttft_ms": 2861.63,
+    "total_time_s": 8.38,
+    "throughput_token_s": 42.96,
+    "token_count": 360,
+    "input_length": 2786,
+    "output_length": 1031,
+    "compression_ratio": 2.7
+  },
+  "gemma4-e4b-compress": {
+    "coldstart_time_s": 90.9,
+    "ttft_ms": 189521.13,
+    "total_time_s": 282.41,
+    "throughput_token_s": 1.48,
+    "token_count": 417,
+    "input_length": 2786,
+    "output_length": 1306,
+    "compression_ratio": 2.13
+  },
+  "gemma4-e2b-compress": {
+    "coldstart_time_s": 16.05,
+    "ttft_ms": 10618.67,
+    "total_time_s": 14.43,
+    "throughput_token_s": 23.15,
+    "token_count": 334,
+    "input_length": 2786,
+    "output_length": 1017,
+    "compression_ratio": 2.74
+  },
+  "glm-edge-4b-compress": {
+    "coldstart_time_s": 6.54,
+    "ttft_ms": 2384.71,
+    "total_time_s": 5.27,
+    "throughput_token_s": 50.31,
+    "token_count": 265,
+    "input_length": 2786,
+    "output_length": 918,
+    "compression_ratio": 3.03
+  },
+  "phi4-mini-compress": {
+    "coldstart_time_s": 8.1,
+    "ttft_ms": 2508.61,
+    "total_time_s": 5.7,
+    "throughput_token_s": 18.76,
+    "token_count": 107,
+    "input_length": 2786,
+    "output_length": 302,
+    "compression_ratio": 9.23
+  }
+}

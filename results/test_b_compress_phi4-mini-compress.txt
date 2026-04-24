@@ -1,0 +1,18 @@
+模型: phi4-mini-compress
+冷启动时间: 8.64s
+首Token响应时间(TTFT): 5131.99ms (热启)
+总响应时间: 14.04s (热启)
+吞吐量: 11.61 token/s (热启)
+Token数: 163
+输入字符数: 29469
+输出字符数: 689
+压缩比: 42.77x
+
+================================================================================
+压缩结果:
+================================================================================
+**Summary of Actions Taken:**\n1. Draft and send an email to John Smith at john.smith@example.com informing him that the meeting starts in one hour.\n2. Send a Teams message notifying Mengrui about budget approval.
+##### 1. Email Task:\n- Recipient: [john.smith@example.com]\n- Subject Line: Meeting Time Update\n- Body Text: Hello John, Just a quick note to let you know that the meeting starts at 3 PM.\n**Status:** Sent successfully with an initial draft provided for review by user.
+##### 2. Teams Message Task:\n- Recipient (person_name): mengrui\nauthoring of budget approval message\n**Content Delivered:**
+"I approved the budget."
+"Thank you, I've sent both messages as requested."

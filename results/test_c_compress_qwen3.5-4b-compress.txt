@@ -1,0 +1,49 @@
+模型: qwen3.5-4b-compress
+冷启动时间: 8.69s
+首Token响应时间(TTFT): 4705.64ms (热启)
+总响应时间: 12.41s (热启)
+吞吐量: 39.18 token/s (热启)
+Token数: 486
+输入字符数: 20177
+输出字符数: 1489
+压缩比: 13.55x
+
+================================================================================
+压缩结果:
+================================================================================
+- **Session ID**: `qira_hybrid_orchestration_20260420_144439_hi_weather`
+- **Date**: 2026-04-20
+
+### Turn 1: Greeting
+- **Intent**: Greeting
+- **User Input**: "hi"
+- **Assistant Response**: "Hello! How can I assist you today? If you have a task, question, or need help with files or images, just let me know."
+- **Status**: Succeeded
+- **Latency**: 4020 ms
+- **Tools Used**: None
+
+### Turn 2: Weather Lookup
+- **Intent**: Weather lookup
+- **User Request**: "tell me weather of beijing today"
+- **Assistant Confirmation**: "You’d like to know the weather in Beijing today. I’ll look up the latest weather information for Beijing and share the details with you."
+- **Tool Execution**:
+  - **Tool**: `web_search_grounding`
+  - **Query**: "Beijing weather today"
+  - **Tool Call ID**: `call_gRnv1RSCtGxUsp5U5gv8S2n8`
+  - **Result**:
+    - **Condition**: Mostly clear
+    - **Temp**: 19°C (66°F) evening, 12°C (54°F) overnight
+    - **Wind**: 6–7 km/h
+    - **Precipitation**: None expected
+    - **Air Quality**: Very unhealthy (sensitive groups advised to avoid outdoor activities)
+    - **Sunrise/Sunset**: 5:32 AM / 6:56 PM (13h 24m daylight)
+- **Assistant Final Response**: Provided summary of weather conditions and offered further details.
+- **Status**: Succeeded
+- **Latency**: 21000 ms
+- **Tools Used**: 1 (`web_search_grounding`)
+
+### Configuration
+- **Strategy**: Hybrid
+- **Context Window Limit**: 128000
+- **Keep Last N Turns**: 2
+- **Summariser Model**: `claude-sonnet-4-20250514`

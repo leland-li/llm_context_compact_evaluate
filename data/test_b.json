@@ -1,0 +1,447 @@
+{
+  "session_id": "6f1b2c3d-4e5f-4789-a123-b456c789d012",
+  "turns": [
+    {
+      "turn_id": 1,
+      "subtasks": [
+        {
+          "subtask_id": "2b3c4d5e",
+          "events": [
+            {
+              "event_id": "e5f6a7b8",
+              "event_type": "system",
+              "content": "# Role and Objective\nYou are an autonomous AI agent developed by Lenovo LATC that completes complex multi-step tasks through intelligent planning and tool usage. You have native support for processing images and various document formats.\n\nCurrent date: 2026-04-16 14:17:59\nImage input capabilities: Enabled\n\n# Memory Usage Guidelines\nWhen answering user questions, determine whether to retrieve information from <User_Memories> based on relevance. Extract relevant data from <User_Memories> only if it contributes to a more accurate or personalized response; otherwise, ignore the <User_Memories> module entirely.\n**If the user explicitly names or refers to a specific person (e.g., \"Li Ming's wife\"), only use memory entries that are explicitly about that named person. Do not substitute or conflate identities based on similar roles(eg: my wife or user wife) or relationships.**\n**If the content in memory is not relevant to answering the question, you must never proactively disclose any information from the user's memory. Always prioritize protecting user privacy.**\n<User_Memories>\n\n</User_Memories>\n\n# Core Principles\n## 1. Persistence\n- You are an agent - By default, please keep going until the user's query is completely resolved, before ending your turn and yielding back to the user. Only terminate your turn when you are sure that the problem is solved.\n- Exception: If you encounter a situation where you cannot proceed (e.g., missing required tools, unavailable capabilities, or lacking essential information), first attempt to resolve it using available resources. Only if the issue cannot be resolved independently should you pause and ask the user for the specific details needed to continue.\n\n## 2. Tool Usage Strategy\n- If no suitable tool exists, clearly explain the limitation rather than forcing an inappropriate tool choice\n- When stuck due to missing information that tools cannot provide, ask the user directly\n- Always prefer tools over assumptions when facts need verification\n- Exception: For general knowledge questions where you have sufficient information, respond directly without unnecessary tool calls\n\n## 3. User Communication\n- Maintain a professional, conversational, and concise tone\n- Before using any tools, always restate the user's goal in your own friendly and clear words to confirm understanding.\n- Explain your approach naturally as part of the conversation flow; avoid templated phrases like \"Here's my plan/approach\"\n- Provide progress updates when necessary before or after each tool call; avoid repetitive status messages\n\n# Execution Workflow\n## Step-by-Step Process\n1. Understand - Focus exclusively on the Current User Request and fully grasp the user's objective\n2. Plan - First determine if tool calls are needed, then determine which tools to use and their sequence\n3. Execute - Chain tool calls continuously until near completion\n4. Verify - Confirm the request is fully satisfied\n5. Deliver - Provide a clear and comprehensive final response\n\n## Tool Execution Rules\n- Parallel calls: Use simultaneously for independent operations\n- Smart selection: Choose the most appropriate tool for each sub-task\n- Error handling:\n  - Try alternative tools or approaches when a tool fails\n  - Never fabricate data when information is unavailable\n  - Inform the user of genuine limitations\n\n## File and Image Handling\n- When content is directly attached, process the content immediately\n- When only file paths are provided, use appropriate tools to load the content\n- Rule: Prioritize directly accessible content, but use tools when necessary to gather missing information\n\n## Final Answer Requirements\n- Comprehensiveness: Ensure your final answer includes all relevant information gathered during the task execution, including complete file paths for any referenced or processed files\n- Completeness: Address all aspects of the user's request without omitting key details\n- Clarity: Present information in a well-organized manner that directly fulfills the user's needs\n- Path Information: For any file operations or references, explicitly provide file paths using Markdown link syntax",
+              "tool_result": null,
+              "image_block": null,
+              "source_ref": "log:turn1:hello:system_instruction",
+              "metadata": {
+                "token_count": 1033,
+                "cumulative_tokens": 1033,
+                "is_compacted": false,
+                "summary": "System instruction for the hello turn",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:17:59.973",
+                "compacted_at": null
+              }
+            },
+            {
+              "event_id": "f6a7b8c9",
+                "tool_result": null,
+                "image_block": null,
+              "event_type": "memory",
+              "content": "",
+              "source_ref": "log:turn1:hello:user_memories",
+              "metadata": {
+                "token_count": 0,
+                "cumulative_tokens": 1033,
+                "is_compacted": false,
+                "summary": "User_Memories block is empty",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:17:59.973",
+                "compacted_at": null
+              }
+            },
+            {
+              "event_id": "a7b8c9d0",
+                "tool_result": null,
+                "image_block": null,
+              "event_type": "user",
+              "content": "hello",
+              "source_ref": "log:turn1:hello:user_prompt",
+              "metadata": {
+                "token_count": 1,
+                "cumulative_tokens": 1034,
+                "is_compacted": false,
+                "summary": "Current User Request only",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:17:59.973",
+                "compacted_at": null
+              }
+            },
+            {
+              "event_id": "b8c9d0e1",
+                "tool_result": null,
+                "image_block": null,
+              "event_type": "assistant",
+              "content": "Hello! How can I assist you today? If you have a task, question, or need help with files or images, just let me know.",
+              "source_ref": "log:turn1:hello:model_response",
+              "metadata": {
+                "token_count": 29,
+                "cumulative_tokens": 1063,
+                "is_compacted": false,
+                "summary": "English greeting response",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:18:04.914",
+                "compacted_at": null
+              }
+            }
+          ],
+          "metadata": {
+                "tool_result": null,
+                "image_block": null,
+            "description": "Respond to greeting hello",
+            "status": "succeeded",
+            "tool_call_count": 0,
+            "success_count": 0,
+            "failure_count": 0,
+            "total_latency_ms": 4941.0,
+            "notes": [
+              "Previous Context is empty for this turn.",
+              "This turn is the start of the explicit hello/email/Teams context chain."
+            ],
+            "started_at": "2026-04-16 14:17:59.973",
+            "ended_at": "2026-04-16 14:18:04.914"
+          },
+          "token_count": 1063
+        }
+      ],
+      "metadata": {
+        "overall_intent": "greeting",
+        "intent_summary": "User greeted the assistant in English",
+        "subtask_count": 1,
+        "is_compacted": false,
+        "compaction_pass": null,
+        "created_at": "2026-04-16 14:17:59.973",
+        "completed_at": "2026-04-16 14:18:04.914"
+      },
+      "token_count": 1063
+    },
+    {
+      "turn_id": 2,
+      "subtasks": [
+        {
+          "subtask_id": "3c4d5e6f",
+          "events": [
+            {
+              "event_id": "c9d0e1f2",
+              "event_type": "system",
+              "content": "# Role and Objective\nYou are an autonomous AI agent developed by Lenovo LATC that completes complex multi-step tasks through intelligent planning and tool usage. You have native support for processing images and various document formats.\n\nCurrent date: 2026-04-16 14:22:38\nImage input capabilities: Enabled\n\n# Memory Usage Guidelines\nWhen answering user questions, determine whether to retrieve information from <User_Memories> based on relevance. Extract relevant data from <User_Memories> only if it contributes to a more accurate or personalized response; otherwise, ignore the <User_Memories> module entirely.\n**If the user explicitly names or refers to a specific person (e.g., \"Li Ming's wife\"), only use memory entries that are explicitly about that named person. Do not substitute or conflate identities based on similar roles(eg: my wife or user wife) or relationships.**\n**If the content in memory is not relevant to answering the question, you must never proactively disclose any information from the user's memory. Always prioritize protecting user privacy.**\n<User_Memories>\n\n</User_Memories>\n\n# Core Principles\n## 1. Persistence\n- You are an agent - By default, please keep going until the user's query is completely resolved, before ending your turn and yielding back to the user. Only terminate your turn when you are sure that the problem is solved.\n- Exception: If you encounter a situation where you cannot proceed (e.g., missing required tools, unavailable capabilities, or lacking essential information), first attempt to resolve it using available resources. Only if the issue cannot be resolved independently should you pause and ask the user for the specific details needed to continue.\n\n## 2. Tool Usage Strategy\n- If no suitable tool exists, clearly explain the limitation rather than forcing an inappropriate tool choice\n- When stuck due to missing information that tools cannot provide, ask the user directly\n- Always prefer tools over assumptions when facts need verification\n- Exception: For general knowledge questions where you have sufficient information, respond directly without unnecessary tool calls\n\n## 3. User Communication\n- Maintain a professional, conversational, and concise tone\n- Before using any tools, always restate the user's goal in your own friendly and clear words to confirm understanding.\n- Explain your approach naturally as part of the conversation flow; avoid templated phrases like \"Here's my plan/approach\"\n- Provide progress updates when necessary before or after each tool call; avoid repetitive status messages\n\n# Execution Workflow\n## Step-by-Step Process\n1. Understand - Focus exclusively on the Current User Request and fully grasp the user's objective\n2. Plan - First determine if tool calls are needed, then determine which tools to use and their sequence\n3. Execute - Chain tool calls continuously until near completion\n4. Verify - Confirm the request is fully satisfied\n5. Deliver - Provide a clear and comprehensive final response\n\n## Tool Execution Rules\n- Parallel calls: Use simultaneously for independent operations\n- Smart selection: Choose the most appropriate tool for each sub-task\n- Error handling:\n  - Try alternative tools or approaches when a tool fails\n  - Never fabricate data when information is unavailable\n  - Inform the user of genuine limitations\n\n## File and Image Handling\n- When content is directly attached, process the content immediately\n- When only file paths are provided, use appropriate tools to load the content\n- Rule: Prioritize directly accessible content, but use tools when necessary to gather missing information\n\n## Final Answer Requirements\n- Comprehensiveness: Ensure your final answer includes all relevant information gathered during the task execution, including complete file paths for any referenced or processed files\n- Completeness: Address all aspects of the user's request without omitting key details\n- Clarity: Present information in a well-organized manner that directly fulfills the user's needs\n- Path Information: For any file operations or references, explicitly provide file paths using Markdown link syntax",
+              "tool_result": null,
+              "image_block": null,
+              "source_ref": "log:turn2:email:system_instruction",
+              "metadata": {
+                "token_count": 1033,
+                "cumulative_tokens": 2096,
+                "is_compacted": false,
+                "summary": "System instruction for the email turn",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:22:38.190",
+                "compacted_at": null
+              }
+            },
+            {
+              "event_id": "d0e1f2a3",
+                "tool_result": null,
+                "image_block": null,
+              "event_type": "memory",
+              "content": "",
+              "source_ref": "log:turn2:email:user_memories",
+              "metadata": {
+                "token_count": 0,
+                "cumulative_tokens": 2096,
+                "is_compacted": false,
+                "summary": "User_Memories block is empty",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:22:38.190",
+                "compacted_at": null
+              }
+            },
+            {
+              "event_id": "e1f2a3b4",
+                "tool_result": null,
+                "image_block": null,
+              "event_type": "user",
+              "content": "Email john.smith@example.com and tell him the meeting starts at 3 PM.",
+              "source_ref": "log:turn2:email:user_prompt",
+              "metadata": {
+                "token_count": 17,
+                "cumulative_tokens": 2113,
+                "is_compacted": false,
+                "summary": "Current User Request only",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:22:38.190",
+                "compacted_at": null
+              }
+            },
+            {
+              "event_id": "f2a3b4c5",
+              "event_type": "tool_qtcore",
+              "content": "Tool call: LocalAgent_APP_send_email_on_pc(recipients=[john.smith@example.com], subject=Meeting Time Update, body=Hello John, Just a quick note to let you know that the meeting starts at 3 PM. Best regards)",
+              "tool_result": {
+                "tool_call_id": "4d5e6f70",
+                "tool_name": "LocalAgent_APP_send_email_on_pc",
+                "tool_type": "qt_core",
+                "success": true,
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"成功\",\"code\":\"确定\",\"message\":\"没问题！我起草了一份初稿，请过目。\",\"timestamp\":\"2026-04-16T06:22:42.945Z\",\"data\":[],\"errors\":[],\"warnings\":[]}"
+                  }
+                ],
+                "error": null,
+                "metadata": {
+                },
+                "latency_ms": 1558.0,
+                "executed_at": "2026-04-16 14:22:42.945"
+              },
+              "image_block": null,
+              "source_ref": "log:turn2:email:tool_call_and_result",
+              "metadata": {
+                "token_count": 84,
+                "cumulative_tokens": 2197,
+                "is_compacted": false,
+                "summary": "Email tool call and successful draft result",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:22:41.387",
+                "compacted_at": null
+              }
+            },
+            {
+              "event_id": "a3b4c5d6",
+              "event_type": "assistant",
+              "content": "I've drafted an email to john.smith@example.com letting him know that the meeting starts at 3 PM. If you need to add more details or attachments, just let me know!",
+              "tool_result": null,
+              "image_block": null,
+              "source_ref": "log:turn2:email:model_response",
+              "metadata": {
+                "token_count": 40,
+                "cumulative_tokens": 2237,
+                "is_compacted": false,
+                "summary": "Assistant confirms the email draft",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:22:48.783",
+                "compacted_at": null
+              }
+            }
+          ],
+          "metadata": {
+            "description": "Draft an email to john.smith@example.com about the meeting time",
+            "status": "succeeded",
+            "tool_call_count": 1,
+            "success_count": 1,
+            "failure_count": 0,
+            "total_latency_ms": 10593.0,
+            "notes": [
+              "Previous Context includes the complete hello exchange.",
+              "The model directly issued the email tool call without a separate pre-tool assistant message."
+            ],
+            "started_at": "2026-04-16 14:22:38.190",
+            "ended_at": "2026-04-16 14:22:48.783"
+          },
+          "token_count": 1174
+        }
+      ],
+      "metadata": {
+        "overall_intent": "send email",
+        "intent_summary": "User asked to email john.smith@example.com about a 3 PM meeting start",
+        "subtask_count": 1,
+        "is_compacted": false,
+        "compaction_pass": null,
+        "created_at": "2026-04-16 14:22:38.190",
+        "completed_at": "2026-04-16 14:22:48.783"
+      },
+      "token_count": 1174
+    },
+    {
+      "turn_id": 3,
+      "subtasks": [
+        {
+          "subtask_id": "4d5e6f70",
+          "events": [
+            {
+              "event_id": "b4c5d6e7",
+              "event_type": "system",
+              "content": "# Role and Objective\nYou are an autonomous AI agent developed by Lenovo LATC that completes complex multi-step tasks through intelligent planning and tool usage. You have native support for processing images and various document formats.\n\nCurrent date: 2026-04-16 14:39:02\nImage input capabilities: Enabled\n\n# Memory Usage Guidelines\nWhen answering user questions, determine whether to retrieve information from <User_Memories> based on relevance. Extract relevant data from <User_Memories> only if it contributes to a more accurate or personalized response; otherwise, ignore the <User_Memories> module entirely.\n**If the user explicitly names or refers to a specific person (e.g., \"Li Ming's wife\"), only use memory entries that are explicitly about that named person. Do not substitute or conflate identities based on similar roles(eg: my wife or user wife) or relationships.**\n**If the content in memory is not relevant to answering the question, you must never proactively disclose any information from the user's memory. Always prioritize protecting user privacy.**\n<User_Memories>\n\n</User_Memories>\n\n# Core Principles\n## 1. Persistence\n- You are an agent - By default, please keep going until the user's query is completely resolved, before ending your turn and yielding back to the user. Only terminate your turn when you are sure that the problem is solved.\n- Exception: If you encounter a situation where you cannot proceed (e.g., missing required tools, unavailable capabilities, or lacking essential information), first attempt to resolve it using available resources. Only if the issue cannot be resolved independently should you pause and ask the user for the specific details needed to continue.\n\n## 2. Tool Usage Strategy\n- If no suitable tool exists, clearly explain the limitation rather than forcing an inappropriate tool choice\n- When stuck due to missing information that tools cannot provide, ask the user directly\n- Always prefer tools over assumptions when facts need verification\n- Exception: For general knowledge questions where you have sufficient information, respond directly without unnecessary tool calls\n\n## 3. User Communication\n- Maintain a professional, conversational, and concise tone\n- Before using any tools, always restate the user's goal in your own friendly and clear words to confirm understanding.\n- Explain your approach naturally as part of the conversation flow; avoid templated phrases like \"Here's my plan/approach\"\n- Provide progress updates when necessary before or after each tool call; avoid repetitive status messages\n\n# Execution Workflow\n## Step-by-Step Process\n1. Understand - Focus exclusively on the Current User Request and fully grasp the user's objective\n2. Plan - First determine if tool calls are needed, then determine which tools to use and their sequence\n3. Execute - Chain tool calls continuously until near completion\n4. Verify - Confirm the request is fully satisfied\n5. Deliver - Provide a clear and comprehensive final response\n\n## Tool Execution Rules\n- Parallel calls: Use simultaneously for independent operations\n- Smart selection: Choose the most appropriate tool for each sub-task\n- Error handling:\n  - Try alternative tools or approaches when a tool fails\n  - Never fabricate data when information is unavailable\n  - Inform the user of genuine limitations\n\n## File and Image Handling\n- When content is directly attached, process the content immediately\n- When only file paths are provided, use appropriate tools to load the content\n- Rule: Prioritize directly accessible content, but use tools when necessary to gather missing information\n\n## Final Answer Requirements\n- Comprehensiveness: Ensure your final answer includes all relevant information gathered during the task execution, including complete file paths for any referenced or processed files\n- Completeness: Address all aspects of the user's request without omitting key details\n- Clarity: Present information in a well-organized manner that directly fulfills the user's needs\n- Path Information: For any file operations or references, explicitly provide file paths using Markdown link syntax",
+              "tool_result": null,
+              "image_block": null,
+              "source_ref": "log:turn3:teams:system_instruction",
+              "metadata": {
+                "token_count": 1033,
+                "cumulative_tokens": 3270,
+                "is_compacted": false,
+                "summary": "System instruction for the Teams turn",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:39:02.424",
+                "compacted_at": null
+              }
+            },
+            {
+              "event_id": "c5d6e7f8",
+              "event_type": "memory",
+              "content": "",
+              "tool_result": null,
+              "image_block": null,
+              "source_ref": "log:turn3:teams:user_memories",
+              "metadata": {
+                "token_count": 0,
+                "cumulative_tokens": 3270,
+                "is_compacted": false,
+                "summary": "User_Memories block is empty",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:39:02.424",
+                "compacted_at": null
+              }
+            },
+            {
+              "event_id": "d6e7f8a9",
+              "event_type": "user",
+              "content": "Tell mengrui on Teams that I approved the budget.",
+              "tool_result": null,
+              "image_block": null,
+              "source_ref": "log:turn3:teams:user_prompt",
+              "metadata": {
+                "token_count": 12,
+                "cumulative_tokens": 3282,
+                "is_compacted": false,
+                "summary": "Current User Request only",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:39:02.424",
+                "compacted_at": null
+              }
+            },
+            {
+              "event_id": "e7f8a9b0",
+              "event_type": "assistant",
+              "content": "You’d like me to send a Teams message to Mengrui, informing them that you’ve approved the budget.\n\nI’ll proceed to send this message now.",
+              "tool_result": null,
+              "image_block": null,
+              "source_ref": "log:turn3:teams:assistant_pre_tool",
+              "metadata": {
+                "token_count": 34,
+                "cumulative_tokens": 3316,
+                "is_compacted": false,
+                "summary": "Assistant acknowledges the messaging request before tool execution",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:39:06.357",
+                "compacted_at": null
+              }
+            },
+            {
+              "event_id": "f8a9b0c1",
+              "event_type": "tool_qtcore",
+              "content": "Tool call: LocalAgent_APP_send_message_on_pc(appname=Teams, person_name=mengrui, message_content=I approved the budget.)",
+              "tool_result": {
+                "tool_call_id": "5e6f7081",
+                "tool_name": "LocalAgent_APP_send_message_on_pc",
+                "tool_type": "qt_core",
+                "success": true,
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"status\":\"成功\",\"code\":\"确定\",\"message\":\"发送信息。\",\"timestamp\":\"2026-04-16T06:39:19.262Z\",\"data\":[],\"errors\":[],\"warnings\":[]}"
+                  }
+                ],
+                "error": null,
+                "metadata": {
+                },
+                "latency_ms": 13563.0,
+                "executed_at": "2026-04-16 14:39:19.262"
+              },
+              "image_block": null,
+              "source_ref": "log:turn3:teams:tool_call_and_result",
+              "metadata": {
+                "token_count": 60,
+                "cumulative_tokens": 3376,
+                "is_compacted": false,
+                "summary": "Teams message tool call and successful send result",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:39:05.699",
+                "compacted_at": null
+              }
+            },
+            {
+              "event_id": "a9b0c1d2",
+              "event_type": "assistant",
+              "content": "The message has been sent to Mengrui on Teams, letting them know that you approved the budget.\n\nIf you need to notify anyone else or follow up, just let me know!",
+              "tool_result": null,
+              "image_block": null,
+              "source_ref": "log:turn3:teams:model_response",
+              "metadata": {
+                "token_count": 40,
+                "cumulative_tokens": 3416,
+                "is_compacted": false,
+                "summary": "Assistant confirms successful Teams delivery",
+                "compaction_pass": null,
+                "created_at": "2026-04-16 14:39:23.738",
+                "compacted_at": null
+              }
+            }
+          ],
+          "metadata": {
+            "description": "Send a Teams message to Mengrui about budget approval",
+            "status": "succeeded",
+            "tool_call_count": 1,
+            "success_count": 1,
+            "failure_count": 0,
+            "total_latency_ms": 21314.0,
+            "notes": [
+              "Previous Context explicitly carries the hello turn and the email turn into this request.",
+              "The email turn is represented in Previous Context only as a partial assistant summary: '> ⚙️ **LocalAgent_APP_send_email_on_pc**' followed by 'I've drafted'."
+            ],
+            "started_at": "2026-04-16 14:39:02.424",
+            "ended_at": "2026-04-16 14:39:23.738"
+          },
+          "token_count": 1179
+        }
+      ],
+      "metadata": {
+        "overall_intent": "send Teams message",
+        "intent_summary": "User asked to tell Mengrui on Teams that the budget was approved",
+        "subtask_count": 1,
+        "is_compacted": false,
+        "compaction_pass": null,
+        "created_at": "2026-04-16 14:39:02.424",
+        "completed_at": "2026-04-16 14:39:23.738"
+      },
+      "token_count": 1179
+    }
+  ],
+  "events": [],
+  "total_tokens_used": 3416,
+  "compaction_pass_count": 0,
+  "compaction_config": {
+    "strategy": "hybrid",
+    "turn_trigger": 5,
+    "context_window_limit": 128000,
+    "usage_threshold_pct": 0.4,
+    "keep_last_n_turns": 2,
+    "summariser_model": "gpt-4.1"
+  },
+  "current_subtask_spec": null,
+  "last_tool_results": [
+    {
+      "tool_call_id": "4d5e6f70",
+      "tool_name": "LocalAgent_APP_send_email_on_pc",
+      "tool_type": "qt_core",
+      "success": true,
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"status\":\"成功\",\"code\":\"确定\",\"message\":\"没问题！我起草了一份初稿，请过目。\",\"timestamp\":\"2026-04-16T06:22:42.945Z\",\"data\":[],\"errors\":[],\"warnings\":[]}"
+        }
+      ],
+      "error": null,
+      "metadata": {
+      },
+      "latency_ms": 1558.0,
+      "executed_at": "2026-04-16 14:22:42.945"
+    },
+    {
+      "tool_call_id": "5e6f7081",
+      "tool_name": "LocalAgent_APP_send_message_on_pc",
+      "tool_type": "qt_core",
+      "success": true,
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"status\":\"成功\",\"code\":\"确定\",\"message\":\"发送信息。\",\"timestamp\":\"2026-04-16T06:39:19.262Z\",\"data\":[],\"errors\":[],\"warnings\":[]}"
+        }
+      ],
+      "error": null,
+      "metadata": {
+      },
+      "latency_ms": 13563.0,
+      "executed_at": "2026-04-16 14:39:19.262"
+    }
+  ]
+}

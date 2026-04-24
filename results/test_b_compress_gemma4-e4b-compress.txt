@@ -1,0 +1,36 @@
+模型: gemma4-e4b-compress
+冷启动时间: 72.57s
+首Token响应时间(TTFT): 109448.83ms (热启)
+总响应时间: 185.78s (热启)
+吞吐量: 1.94 token/s (热启)
+Token数: 361
+输入字符数: 29469
+输出字符数: 1103
+压缩比: 26.72x
+
+================================================================================
+压缩结果:
+================================================================================
+*   **Turn 1: Greeting**
+    *   **Action:** User initiated a greeting ("hello").
+    *   **Result:** Assistant provided a standard greeting response.
+
+*   **Turn 2: Email Task**
+    *   **Goal:** Email `john.smith@example.com` regarding a meeting time change.
+    *   **Tool Used:** `LocalAgent_APP_send_email_on_pc` (ID: `4d5e6f70`).
+    *   **Parameters:**
+        *   Recipients: `john.smith@example.com`
+        *   Subject: `Meeting Time Update`
+        *   Body: "Hello John, Just a quick note to let you know that the meeting starts at 3 PM. Best regards"
+    *   **Execution Result:** Successful draft creation.
+    *   **Timestamp:** `2026-04-16 14:22:42.945`.
+
+*   **Turn 3: Teams Messaging Task**
+    *   **Goal:** Send a Teams message to Mengrui confirming budget approval.
+    *   **Tool Used:** `LocalAgent_APP_send_message_on_pc` (ID: `5e6f7081`).
+    *   **Parameters:**
+        *   App: Teams
+        *   Person: `mengrui`
+        *   Message Content: "I approved the budget."
+    *   **Execution Result:** Successful message delivery.
+    *   **Timestamp:** `2026-04-16 14:39:19.262`.
